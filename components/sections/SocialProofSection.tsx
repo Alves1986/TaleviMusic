@@ -38,11 +38,6 @@ export function SocialProofSection() {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <p className="font-caption text-(--color-ink-muted) italic">
-            Mencionar participações em eventos, DVDs e festivais regionais como reforço de credibilidade.
-          </p>
-        </div>
       </div>
     </section>
   );
