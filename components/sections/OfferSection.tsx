@@ -2,9 +2,7 @@ import React from 'react';
 import { Button } from '../Button';
 
 export function OfferSection() {
-  const hotmartUrl = process.env.NEXT_PUBLIC_HOTMART_PRODUCT_ID 
-    ? `https://pay.hotmart.com/${process.env.NEXT_PUBLIC_HOTMART_PRODUCT_ID}` 
-    : "#";
+  const hotmartUrl = "https://hotmart.com/pt-br/marketplace/produtos/100-acordes-para-voce-destravar-no-violao";
 
   return (
     <section id="oferta" className="w-full py-16 lg:py-24 bg-(--color-paper)">

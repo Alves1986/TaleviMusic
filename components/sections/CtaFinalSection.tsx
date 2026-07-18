@@ -3,9 +3,7 @@ import { Button } from '../Button';
 import { SectionDivider } from '../SectionDivider';
 
 export function CtaFinalSection() {
-  const hotmartUrl = process.env.NEXT_PUBLIC_HOTMART_PRODUCT_ID 
-    ? `https://pay.hotmart.com/${process.env.NEXT_PUBLIC_HOTMART_PRODUCT_ID}` 
-    : "#";
+  const hotmartUrl = "https://hotmart.com/pt-br/marketplace/produtos/100-acordes-para-voce-destravar-no-violao";
 
   return (
     <section className="w-full py-16 lg:py-28 bg-(--color-paper) border-t border-(--color-parchment-line) relative overflow-hidden">
