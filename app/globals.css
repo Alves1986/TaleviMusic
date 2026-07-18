@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f3ecdd;
+  --surface: #efe6d2;
+  --fg: #241c15;
+  --muted: #5c534c;
+  --border: #d8cbae;
+  --accent: #b8863a;
+  --accent-secondary: #33473a;
+  --primary: #5c2a1f;
+
+  --color-paper: var(--bg);
+  --color-parchment: var(--surface);
+  --color-ink: var(--fg);
+  --color-ink-muted: var(--muted);
+  --color-parchment-line: var(--border);
+  --color-brass: var(--accent);
+  --color-forest: var(--accent-secondary);
+  --color-rosewood: var(--primary);
+
+  --radius: 4px;
+  --border-width: 1px;
+  --control-height: 44px;
+  --space-unit: 8px;
+  --max-width: 1120px;
+
+  --text-hero: clamp(2.5rem, 4vw + 1rem, 4rem);
+  --text-h2: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+  --text-body: 1.0625rem;
+  --leading-body: 1.6;
+  --leading-hero: 1.05;
+}
+
+@theme {
+  --color-paper: var(--color-paper);
+  --color-parchment: var(--color-parchment);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-parchment-line: var(--color-parchment-line);
+  --color-brass: var(--color-brass);
+  --color-forest: var(--color-forest);
+  --color-rosewood: var(--color-rosewood);
+
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+
+  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-work-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
+  --font-caption: var(--font-cormorant), Georgia, serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: var(--leading-hero);
+  color: var(--primary);
+}
+
+.mono, code, kbd {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.caption-brand {
+  font-family: var(--font-caption);
+  font-weight: 300;
+}
