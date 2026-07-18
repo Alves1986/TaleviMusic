@@ -44,7 +44,7 @@ export function OfferSection() {
         <div className="flex justify-center">
           <Button 
             className="w-full sm:w-auto text-base py-4 px-10 shadow-lg text-lg"
-            onClick={() => window.location.href = hotmartUrl}
+            href={hotmartUrl}
           >
             Aproveite a Oferta por R$ 19,90
           </Button>

@@ -34,7 +34,7 @@ export function FeaturesSection() {
         </div>
         
         <div className="mt-16 flex justify-center">
-          <Button onClick={() => document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Button href="#oferta">
             Quero Meu E-book Agora!
           </Button>
         </div>

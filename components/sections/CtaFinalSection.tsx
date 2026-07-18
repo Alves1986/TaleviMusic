@@ -31,7 +31,7 @@ export function CtaFinalSection() {
         <div className="flex justify-center mb-16">
           <Button 
             className="w-full sm:w-auto text-base py-5 px-12 shadow-xl text-lg"
-            onClick={() => window.location.href = hotmartUrl}
+            href={hotmartUrl}
           >
             Quero Meu E-book Agora!
           </Button>

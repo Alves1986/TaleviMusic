@@ -29,9 +29,7 @@ export function HeroSection() {
               O guia completo para músicos de todos os níveis, com a didática de Carlos Eduardo Dias Talevi.
             </p>
             
-            <Button className="w-full sm:w-auto text-base py-4 px-8" onClick={() => {
-              document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' });
-            }}>
+            <Button className="w-full sm:w-auto text-base py-4 px-8" href="#oferta">
               Quero Destravar Meu Violão Agora!
             </Button>
           </div>

@@ -51,6 +51,10 @@
   --font-caption: var(--font-cormorant), Georgia, serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg);
   color: var(--fg);

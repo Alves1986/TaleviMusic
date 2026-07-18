@@ -26,14 +26,12 @@ export default function Home() {
 
       {/* Mobile Sticky CTA */}
       <div className="fixed bottom-0 left-0 w-full p-4 bg-(--color-paper) border-t border-(--color-parchment-line) shadow-[0_-10px_20px_rgba(0,0,0,0.05)] z-50 md:hidden flex justify-center">
-        <button 
-          onClick={() => {
-            document.getElementById('oferta')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="w-full h-12 bg-(--color-brass) text-(--color-ink) rounded-[4px] font-body font-bold text-sm tracking-wide uppercase shadow-[0_2px_0_color-mix(in_srgb,var(--color-ink)_18%,transparent)]"
+        <a 
+          href="#oferta"
+          className="w-full h-12 bg-(--color-brass) text-(--color-ink) rounded-[4px] font-body font-bold text-sm tracking-wide uppercase shadow-[0_2px_0_color-mix(in_srgb,var(--color-ink)_18%,transparent)] flex items-center justify-center no-underline"
         >
           Quero Destravar Agora
-        </button>
+        </a>
       </div>
     </main>
   );
