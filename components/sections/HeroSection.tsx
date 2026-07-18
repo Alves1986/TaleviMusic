@@ -4,13 +4,13 @@ import { Button } from '../Button';
 
 export function HeroSection() {
   return (
-    <section className="relative w-full min-h-[90vh] flex items-center pt-24 pb-16 lg:py-24 bg-(--color-paper) overflow-hidden">
+    <section className="relative w-full pt-10 pb-16 lg:pt-12 lg:pb-20 bg-(--color-paper) overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-[1120px] relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
           
           {/* Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <div className="mb-12">
+            <div className="mb-6 lg:mb-8">
               <Image 
                 src="/images/logo sem fundo.png" 
                 alt="Talevi Escola de Música" 
