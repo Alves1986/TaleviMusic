@@ -25,8 +25,10 @@ export function Button({ className, children, href, ...props }: ButtonProps) {
   );
 
   if (href) {
+    // Separate native button props that shouldn't go to anchor
+    const { type, disabled, ...anchorProps } = props as any;
     return (
-      <a href={href} className={styles}>
+      <a href={href} className={styles} {...anchorProps} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>
         {children}
       </a>
     );
