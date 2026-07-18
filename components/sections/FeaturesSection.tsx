@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from '../Button';
 
 export function FeaturesSection() {
-  const hotmartUrl = "https://hotmart.com/pt-br/marketplace/produtos/100-acordes-para-voce-destravar-no-violao";
   const features = [
     { title: "Tríades e Tétrades", desc: "entenda a estrutura dos acordes em vez de decorar posições" },
     { title: "Acordes Maiores e Menores", desc: "domine as bases que sustentam 80% das músicas" },
@@ -35,7 +34,7 @@ export function FeaturesSection() {
         </div>
         
         <div className="mt-16 flex justify-center">
-          <Button href={hotmartUrl}>
+          <Button href="#oferta">
             Quero Meu E-book Agora!
           </Button>
         </div>

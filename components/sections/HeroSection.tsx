@@ -3,8 +3,6 @@ import Image from 'next/image';
 import { Button } from '../Button';
 
 export function HeroSection() {
-  const hotmartUrl = "https://hotmart.com/pt-br/marketplace/produtos/100-acordes-para-voce-destravar-no-violao";
-
   return (
     <section className="relative w-full min-h-[90vh] flex items-center pt-24 pb-16 lg:py-24 bg-(--color-paper) overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-[1120px] relative z-10">
@@ -31,7 +29,7 @@ export function HeroSection() {
               O guia completo para músicos de todos os níveis, com a didática de Carlos Eduardo Dias Talevi.
             </p>
             
-            <Button className="w-full sm:w-auto text-base py-4 px-8" href={hotmartUrl}>
+            <Button className="w-full sm:w-auto text-base py-4 px-8" href="#oferta">
               Quero Destravar Meu Violão Agora!
             </Button>
           </div>

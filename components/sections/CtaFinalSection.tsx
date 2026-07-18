@@ -3,8 +3,6 @@ import { Button } from '../Button';
 import { SectionDivider } from '../SectionDivider';
 
 export function CtaFinalSection() {
-  const hotmartUrl = "https://hotmart.com/pt-br/marketplace/produtos/100-acordes-para-voce-destravar-no-violao";
-
   return (
     <section className="w-full py-16 lg:py-28 bg-(--color-paper) border-t border-(--color-parchment-line) relative overflow-hidden">
       
@@ -29,7 +27,7 @@ export function CtaFinalSection() {
         <div className="flex justify-center mb-16">
           <Button 
             className="w-full sm:w-auto text-base py-5 px-12 shadow-xl text-lg"
-            href={hotmartUrl}
+            href="#oferta"
           >
             Quero Meu E-book Agora!
           </Button>
