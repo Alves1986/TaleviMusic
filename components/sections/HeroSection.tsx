@@ -4,39 +4,39 @@ import { Button } from '../Button';
 
 export function HeroSection() {
   return (
-    <section className="relative w-full pt-10 pb-16 lg:pt-12 lg:pb-20 bg-(--color-paper) overflow-hidden">
+    <section className="relative w-full pt-6 pb-12 lg:pt-8 lg:pb-12 bg-(--color-paper) overflow-hidden min-h-[100svh] lg:min-h-0 flex items-center">
       <div className="container mx-auto px-4 md:px-8 max-w-[1120px] relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
           
           {/* Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <div className="mb-6 lg:mb-8">
+            <div className="mb-4 lg:mb-6">
               <Image 
                 src="/images/logo sem fundo.png" 
                 alt="Talevi Escola de Música" 
-                width={200} 
-                height={80} 
-                className="w-[160px] md:w-[200px] h-auto"
+                width={180} 
+                height={72} 
+                className="w-[140px] md:w-[180px] h-auto"
                 priority
               />
             </div>
             
-            <h1 className="font-display text-(--color-rosewood) text-[clamp(2.5rem,4vw+1rem,4rem)] leading-[1.05] mb-6">
+            <h1 className="font-display text-(--color-rosewood) text-[clamp(2rem,3vw+1rem,3.25rem)] leading-[1.1] mb-4">
               <i className="italic">Destrave</i> no Violão: Aprenda +100 Acordes e Supere Suas Dificuldades Musicais
             </h1>
             
-            <p className="font-body text-(--color-ink) text-lg md:text-xl mb-10 max-w-xl">
+            <p className="font-body text-(--color-ink) text-base md:text-lg mb-6 max-w-xl">
               O guia completo para músicos de todos os níveis, com a didática de Carlos Eduardo Dias Talevi.
             </p>
             
-            <Button className="w-full sm:w-auto text-base py-4 px-8" href="#oferta">
+            <Button className="w-full sm:w-auto text-base py-3 px-8 shadow-md" href="#oferta">
               Quero Destravar Meu Violão Agora!
             </Button>
           </div>
 
           {/* Visual Content (Mockup) */}
-          <div className="w-full lg:w-1/2 flex justify-center relative mt-12 lg:mt-0">
-            <div className="relative w-full max-w-[400px] aspect-[3/4] shadow-2xl rounded-sm overflow-hidden border border-(--color-parchment-line) transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
+          <div className="w-full lg:w-1/2 flex justify-center relative mt-8 lg:mt-0">
+            <div className="relative w-full max-w-[320px] lg:max-w-[360px] aspect-[3/4] shadow-2xl rounded-sm overflow-hidden border border-(--color-parchment-line) transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
               <Image 
                 src="/images/IMG_2633.PNG"
                 alt="Capa do E-book +100 Acordes"
