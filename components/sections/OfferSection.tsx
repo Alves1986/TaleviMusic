@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '../Button';
+import React from "react";
+import { Button } from "../Button";
 
 export function OfferSection() {
   const hotmartUrl = "https://hotmart.com/pt-br/marketplace/produtos/100-acordes-para-voce-destravar-no-violao";
@@ -10,7 +10,7 @@ export function OfferSection() {
         <h2 className="font-display text-(--color-primary) text-[clamp(1.75rem,2vw+1rem,2.5rem)] mb-8">
           O investimento
         </h2>
-        
+
         <p className="font-body text-(--color-ink) text-lg mb-10 max-w-2xl mx-auto">
           Um dicionário completo de acordes, estruturado por um professor com 20+ anos de estrada e formação em Terapia Ocupacional.
         </p>
@@ -19,7 +19,7 @@ export function OfferSection() {
           {/* Decorative watermark */}
           <div className="absolute top-0 left-0 opacity-[0.03] text-(--color-rosewood) pointer-events-none -translate-x-1/2 -translate-y-1/2">
             <svg width="400" height="400" viewBox="0 0 100 100" fill="currentColor">
-              <path d="M50 0 C77.614 0 100 22.386 100 50 C100 77.614 77.614 100 50 100 C22.386 100 0 77.614 0 50 C0 22.386 22.386 0 50 0 Z" />
+              <path d="M50 0 C77.614 0 100 22.386 100 50 C100 77.614 77.614 100 50 100 C22.386 100 0 77.614 22.386 0 50 0 Z" />
             </svg>
           </div>
 
@@ -38,11 +38,11 @@ export function OfferSection() {
             </p>
           </div>
         </div>
-        
+
         <div className="flex justify-center">
-          <Button 
+          <Button
             className="w-full sm:w-auto text-base py-4 px-10 shadow-lg text-lg"
-            href={hotmartUrl}
+          href={hotmartUrl}
           >
             Aproveite a Oferta por R$ 19,90
           </Button>

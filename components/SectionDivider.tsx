@@ -1,7 +1,7 @@
 "use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 interface SectionDividerProps {
   chordName: string;
@@ -9,9 +9,44 @@ interface SectionDividerProps {
 }
 
 export function SectionDivider({ chordName, className }: SectionDividerProps) {
+  const getChordDots = (chord: string) => {
+    switch (chord) {
+      case "C":
+        return [
+          { cx: 18, cy: 47.5 },
+          { cx: 26, cy: 32.5 },
+          { cx: 42, cy: 17.5 }
+        ];
+      case "D":
+        return [
+          { cx: 34, cy: 32.5 },
+          { cx: 42, cy: 47.5 },
+          { cx: 50, cy: 32.5 }
+        ];
+      case "G":
+        return [
+          { cx: 10, cy: 55 },
+          { cx: 18, cy: 40 },
+          { cx: 50, cy: 55 }
+        ];
+      case "Em":
+        return [
+          { cx: 18, cy: 32.5 },
+          { cx: 26, cy: 32.5 }
+        ];
+      default:
+        return [
+          { cx: 26, cy: 17.5 },
+          { cx: 34, cy: 17.5 }
+        ];
+    }
+  };
+
+  const dots = getChordDots(chordName);
+
   // Simple chord diagram visualization
   return (
-    <div className={`flex flex-col items-center justify-center py-12 ${className || ''}`}>
+    <div className={`flex flex-col items-center justify-center py-12 ${className || ""}`}>
       <motion.svg
         width="60"
         height="70"
@@ -32,7 +67,7 @@ export function SectionDivider({ chordName, className }: SectionDividerProps) {
             visible: { pathLength: 1, transition: { duration: 0.5 } }
           }}
         />
-        
+
         {/* Strings */}
         {[10, 18, 26, 34, 42, 50].map((x, i) => (
           <motion.line
@@ -59,21 +94,31 @@ export function SectionDivider({ chordName, className }: SectionDividerProps) {
           />
         ))}
 
-        {/* Example Chord Dots (Generic dots for Em style as placeholder) */}
-        <motion.circle
-          cx="26" cy="17.5" r="3" fill="currentColor"
-          variants={{
-            hidden: { scale: 0, opacity: 0 },
-            visible: { scale: 1, opacity: 1, transition: { duration: 0.2, delay: 0.8 } }
-          }}
-        />
-        <motion.circle
-          cx="34" cy="17.5" r="3" fill="currentColor"
-          variants={{
-            hidden: { scale: 0, opacity: 0 },
-            visible: { scale: 1, opacity: 1, transition: { duration: 0.2, delay: 0.9 } }
-          }}
-        />
+        {/* Chord Dots */}
+        {dots.map((dot, i) => (
+          <motion.circle
+            key={`dot-${i}`}
+            cx={dot.cx} cy={dot.cy} r="3" fill="currentColor"
+            style={{
+              transformBox: "fill-box",
+              transformOrigin: "50% 50%",
+            }}
+            variants={{
+              hidden: { scale: 0, opacity: 0 },
+              visible: { scale: 1, opacity: 1, transition: { duration: 0.3, delay: 0.8 + i * 0.1, ease: "easeOut" } }
+            }}
+            animate={{
+              scale: [1, 1.1, 1, 1.08, 1],
+              transition: {
+                duration: 1.6,
+                delay: 1 + i * 0.15,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut"
+              }
+            }}
+          />
+        ))}
       </motion.svg>
       <span className="font-mono uppercase text-[0.875rem] text-(--color-rosewood) mt-3">
         {chordName}
